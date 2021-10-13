@@ -1,7 +1,7 @@
 import threading
 from datetime import timedelta
 
-from VideoRegistrator import CamRecorder
+from cam_recorder import CamRecorder
 from config import single_url
 
 # camera_urls = []

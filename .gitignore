@@ -129,4 +129,6 @@ dmypy.json
 .pyre/
 config.py
 .idea/
-/media/nik
+
+#custom
+/media/

@@ -1,10 +1,10 @@
+import os
 import threading
 from datetime import timedelta
 
 from cam_recorder import CamRecorder
 from config import single_url
 
-# camera_urls = []
 threads = []
 
 for i in range(4):
@@ -17,5 +17,10 @@ for i in range(4):
     threads.append(thread)
     thread.start()
 
-for thread in threads:
-    thread.join()
+
+if __name__ == '__main__':
+    if not os.path.exists('/media'):
+        os.mkdir('/media')
+
+    for thread in threads:
+        thread.join()

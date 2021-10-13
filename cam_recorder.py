@@ -1,3 +1,4 @@
+import os
 from datetime import datetime, timedelta
 
 import cv2
@@ -54,6 +55,9 @@ class CamRecorder:
 
 
 if __name__ == '__main__':
+    if not os.path.exists('/media'):
+        os.mkdir('/media')
+
     cam_recorder = CamRecorder(
         url=single_url,
         filename='res.avi',
